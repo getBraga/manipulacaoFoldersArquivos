@@ -28,6 +28,7 @@ namespace DirectoryDirectoryInfo
                 {
                     Console.WriteLine(folder);
                 }
+                Directory.CreateDirectory(path.UpdateSourcePath() + @"/newFolder");
             }
             catch (IOException error)
             {
