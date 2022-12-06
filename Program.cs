@@ -2,6 +2,7 @@
 
 using DirectoryDirectoryInfo;
 using DirectoryDirectoryInfo.files.notes;
+using System;
 
 namespace DirectoryDirectoryInfo
 {
@@ -29,6 +30,15 @@ namespace DirectoryDirectoryInfo
                     Console.WriteLine(folder);
                 }
                 Directory.CreateDirectory(path.UpdateSourcePath() + @"/newFolder");
+
+                Console.WriteLine("DirectorySeparatorChar: " + Path.DirectorySeparatorChar);
+                Console.WriteLine("PathSeparator: " + Path.PathSeparator);
+                Console.WriteLine("GetDirectoryName: " + Path.GetDirectoryName(filesFolders.UpdateFileDefaultText1()));
+                Console.WriteLine("GetFileName: " + Path.GetFileName(filesFolders.UpdateFileDefaultText1()));
+                Console.WriteLine("GetExtension: " + Path.GetExtension(filesFolders.UpdateFileDefaultText1()));
+                Console.WriteLine("GetFileNameWithoutExtension: " + Path.GetFileNameWithoutExtension(filesFolders.UpdateFileDefaultText1()));
+                Console.WriteLine("GetFullPath: " + Path.GetFullPath(filesFolders.UpdateFileDefaultText1()));
+                Console.WriteLine("GetTempPath: " + Path.GetTempPath());
             }
             catch (IOException error)
             {
