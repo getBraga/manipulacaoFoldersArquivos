@@ -21,7 +21,13 @@ namespace DirectoryDirectoryInfo
                     Console.WriteLine(folder);
                 }
 
-             
+                PathFile filesFolders = new PathFile();
+                var files = Directory.EnumerateFiles(filesFolders.UpdateSourcePath(), "*.*", SearchOption.AllDirectories);
+                Console.WriteLine("Files");
+                foreach (string folder in files)
+                {
+                    Console.WriteLine(folder);
+                }
             }
             catch (IOException error)
             {
